@@ -1,4 +1,3 @@
-from pandas.core.indexes.base import default_index
 import tabula
 import pandas as pd
 import numpy as np
