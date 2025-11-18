@@ -9,7 +9,7 @@ import logging
 
 
 """
-ISIMIP surface wind is measured at 10m height
+ERA5 surface wind is measured at 10m height
 
 Power law function to caculate wind speed at 100m height
 
@@ -26,20 +26,7 @@ Wind speed is converted to wind power using the formula given in 'Meteorology an
 
 To calculate capacity factor of wind power, wind power calculated at monthly wind speed is divided by 2 MW (2000 KW) which is the capacity of a typical wind turbine.
 
-We used ISIMIP surface wind speed data to calculate wind power and capacity factor of wind power.
-
-For Solar power generation 
-Solar power is calculated using the formula given in 'Meteorology and climatology of historical weekly wind and solar power resource droughts over western North America in ERA5' paper by Patrick T. Brown, Ken Caldeira 2021
-
-
-
-Capacity factor of solar power = (G/Gstc)*(0.9)*(0.95)
-G = total incident downwelling
-Gstc = 1000 W/m^2, standard test condition
-0.9 is perfomance
-For solar power, we used ISIMIP surface shortwave downwelling radiation used. ISIMIP uses the ERA5 reanalysis data. ERA5 gives direct and diffuse solar radiation (https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-near-surface-meteorological-variables?tab=overview).
-https://confluence.ecmwf.int/pages/viewpage.action?pageId=197702790
-convert J/m2 to W/m2 by dividing by 86400
+We used ERA5 surface wind speed data to calculate wind power and capacity factor of wind power.
 
 """
 
