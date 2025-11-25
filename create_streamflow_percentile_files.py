@@ -51,7 +51,7 @@ def process_plant(plant_id, glohydrores_df, streamflow_data, output_dir, time_se
             month_data = plant_streamflow_data[month_selector]
 
             if len(month_data) > 0:
-                month_percentile_array = [
+                month_percentile_array[month_selector] = [
                     percentileofscore(month_data, value, kind="rank")
                     for value in month_data
                 ]
@@ -125,14 +125,6 @@ def main(streamflow_path, pcr_lon_lat_file, glohydrores_file, output_dir, start_
         results = p.map(process_plant_partial, unique_ids)
 
 
-  # Parameters
-    # streamflow_path = "/home/shah0012/PCRGLOWB_data/discharge/gswp3_w5e5/runs_till_2022/"
-    # pcr_lon_lat_file = "/scratch/shah0012/hybrid_hydropower_model/data/hybrid_model_data/power_plant_pcrglob_lat_lon.csv"
-    # glohydrores_file = "/home/shah0012/GloHydroRes/Output_data/GloHydroRes_vs2.xlsx"
-    # output_dir = "/scratch/shah0012/hybrid_hydropower_model/data/percentile_files"
-    # start_year = "1981"
-    # end_year = "2022"
-    
 
 if __name__ == "__main__":
 
