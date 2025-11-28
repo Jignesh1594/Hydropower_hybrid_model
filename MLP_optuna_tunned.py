@@ -265,7 +265,7 @@ def main(train_file, valid_file, test_file, model_output_file, output_file,  min
         else:
             logger.info(f"Plant {plant} data is not avaialble for test dataset")
 
-    standardized_features = ["features", "date", "glohydrores_plant_id", "physical_6n_plant_std", "physical_4n_plant_std",
+    standardized_features = ["date", "glohydrores_plant_id", "physical_6n_plant_std", "physical_4n_plant_std",
     "physical_3n_plant_std", "physical_2n_plant_std",  "physical_1n_plant_std",  "physical_0n_plant_std",  "temperature_std",
     "CDD_std", "HDD_std", "res_vol_km3", "installed_capacity_mw", "Solar_monthly_generation_persqkm_std", "Wind_monthly_generation_persqkm_std",
     "observed_plant_CF", "plant_lat", "snowcover_6n_std", "snowcover_5n_std", "snowcover_4n_std", "snowcover_3n_std", "snowcover_2n_std","snowcover_1n_std",
