@@ -389,7 +389,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model_output_dir",
         default="/home/shah0012/Hydropower_hybrid_model/model/optuna_tunned_RF_best_params.pkl",
-        help="Directory with file name (csv format) contain test data"
+        help="Directory with file name (pkl format) to store model best parameters"
     )
 
 
