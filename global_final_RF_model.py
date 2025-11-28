@@ -338,7 +338,7 @@ def main(train_file, valid_file, test_file, model_output_file, global_input_file
     global_data.to_csv(output_file, index=False)
 
 
-
+train_file, valid_file, test_file, model_output_file, global_input_file, output_file,  min_observations = 24
 
 if __name__ == "__main__":
 
@@ -368,7 +368,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model_output_dir",
         default="/home/shah0012/Hydropower_hybrid_model/model/optuna_tunned_RF_best_params.pkl",
-        help="Directory with file name (csv format) contain test data"
+        help="Directory with file name (pkl format) contain best parameters of Random Foreset"
+    )
+
+    parser.add_argument(
+        "--global_input_dir",
+        default="/scratch/shah0012/hybrid_hydropower_model/data/hybrid_model_data/global_model_train_data_1981_2022_selected_variables_all_plants_with_snow_cover_plant_lat_historical_snowcover.csv",
+        help="Directory with file name (csv format) contain global input data"
     )
 
 
