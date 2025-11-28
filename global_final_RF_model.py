@@ -380,7 +380,7 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--output_dir",
-        default="/scratch/shah0012/hybrid_hydropower_model/hybrid_model_results/optuna_tunned_RF_test_results.csv",
+        default="/scratch/shah0012/hybrid_hydropower_model/hybrid_model_results/global_data_prediction_designed_dataset_1982_2022_target_CF.csv",
         help="Directory with file name (csv format) to store the final results"
     )
 
